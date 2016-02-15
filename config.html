@@ -56,7 +56,9 @@
       $(document).ready(function() {
         var priorSearch = getURLVariable('searchingFor');
         priorSearch = decodeURI(priorSearch);
-      
+        if (priorSearch) {
+          $('#searchingFor').html(priorSearch);
+        }
         $("#b-cancel").click(function() {
           document.location = "pebblejs://close";
         });
