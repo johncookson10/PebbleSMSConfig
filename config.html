@@ -47,7 +47,10 @@
     </div>
     <script>
       function saveOptions() {
-       
+        var options = {
+          'searchingFor': $("#searchingFor").val()
+        }
+        return options;
       }
    
       $(document).ready(function() {

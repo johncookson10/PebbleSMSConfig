@@ -43,12 +43,9 @@
 
 
 
+    <input name ="Name1" id="Name1" type="text" class="form-control" placeholder="Enter Name" />
+    <br />
   
-   <div data-role="fieldcontain">
-          <input cols="40" rows="8" name="Name1" id="Name1" style="color: #000; width: 100%;"></input>
-        </div>
-
-
 
 <input id="Number1" type="text" class="form-control" placeholder="Enter Number" />
 <br/>
@@ -157,11 +154,11 @@
 
  		if (Name1) {
           $('#Name1').html(Name1);
-          console.log("I am in the IF Loop of Name1.html")
+          console.log("I am in the IF Loop of Name1")
         }
 
 var Name2 = getURLVariable('Name2');
-          Name2 = decodeURI(Name2);
+          Name1 = decodeURI(Name2);
           console.log(Name2)
 
  		if (Name2) {
