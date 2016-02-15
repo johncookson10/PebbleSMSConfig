@@ -52,12 +52,11 @@
         }
         return options;
       }
+   
       $(document).ready(function() {
         var priorSearch = getURLVariable('searchingFor');
         priorSearch = decodeURI(priorSearch);
-        if (priorSearch) {
-          $('#searchingFor').html(priorSearch);
-        }
+      
         $("#b-cancel").click(function() {
           document.location = "pebblejs://close";
         });
@@ -66,6 +65,7 @@
           document.location = location;
         });
       });
+      
       function getURLVariable(name) {
         name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
         var regexS = "[\\?&]"+name+"=([^&#]*)",
