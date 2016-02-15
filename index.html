@@ -131,6 +131,17 @@
 
 </body>
 <script>
+
+
+      $(document).ready(function() {
+        var priorSearch = getURLVariable('searchingFor');
+        priorSearch = decodeURI(priorSearch);
+        if (priorSearch) {
+          $('#searchingFor').html(priorSearch);
+        }
+
+        }
+
 var nameInput = document.getElementById('Name');
 
 document.querySelector('form.pure-form').addEventListener('submit', function (e) {
@@ -144,13 +155,25 @@ var contacts = [Name1.value,Name2.value, Name3.value,Name4.value,Name5.value,Nam
 
 var numbers = [Number1.value,Number2.value, Number3.value,Number4.value,Number5.value,Number6.value, Number7.value,Number8.value];
 
+// Return data to watchapp
+  location.href = 'pebblejs://close#' + 
+    encodeURIComponent(JSON.stringify(contacts,numbers));
 
 console.log(contacts) ;  
 console.log(numbers) ;
 
-// Return data to watchapp
-  location.href = 'pebblejs://close#' + 
-    encodeURIComponent(JSON.stringify(contacts,numbers));
+     function getURLVariable(name) {
+        name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+        var regexS = "[\\?&]"+name+"=([^&#]*)",
+            regex = new RegExp(regexS),
+            results = regex.exec(window.location.href);
+        if (results == null) return "";
+        else return results[1];
+      }
+      
+
+
+
 
 });
 </script>
