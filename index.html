@@ -1,11 +1,84 @@
-<form action="/PebbleSMSConfig/">
-  First name:<br>
-  <input type="text" name="firstname" value="Mickey">
-  <br>
-  Last name:<br>
-  <input type="text" name="lastname" value="Mouse">
-  <br><br>
-  <input type="submit" value="Submit">
-</form> 
+<html>
+<h1>PebbleSMS Config</h1>
 
-<p>If you click the "Submit" button, the form-data will be sent to a page called "action_page.php".</p>
+<form class="pure-form">
+    <input id="Name1" type="text" placeholder="Enter Name" />
+
+<input id="Number1" type="text" placeholder="Enter Number" />
+<br/>
+<br/>
+
+    <input id="Name2" type="text" placeholder="Enter Name" />
+
+<input id="Number2" type="text" placeholder="Enter Number" />
+<br/>
+<br/>
+
+
+    <input id="Name3" type="text" placeholder="Enter Name" />
+
+<input id="Number3" type="text" placeholder="Enter Number" />
+<br/>
+<br/>
+
+
+
+    <input id="Name4" type="text" placeholder="Enter Name" />
+
+<input id="Number4" type="text" placeholder="Enter Number" />
+<br/>
+<br/>
+
+
+ <input id="Name5" type="text" placeholder="Enter Name" />
+
+<input id="Number5" type="text" placeholder="Enter Number" />
+<br/>
+<br/>
+
+
+ <input id="Name6" type="text" placeholder="Enter Name" />
+
+<input id="Number6" type="text" placeholder="Enter Number" />
+<br/>
+<br/>
+
+
+ <input id="Name7" type="text" placeholder="Enter Name" />
+
+<input id="Number7" type="text" placeholder="Enter Number" />
+<br/>
+<br/>
+
+
+ <input id="Name8" type="text" placeholder="Enter Name" />
+
+<input id="Number8" type="text" placeholder="Enter Number" />
+<br/>
+<br/>
+
+
+ <button type="submit">Submit</button>
+</form>
+
+
+<script>
+var nameInput = document.getElementById('Name');
+
+document.querySelector('form.pure-form').addEventListener('submit', function (e) {
+
+    //prevent the normal submission of the form
+    e.preventDefault();
+
+
+var contacts = [Name1.value,Name2.value, Name3.value,Name4.value,Name5.value,Name6.value, Name7.value,Name8.value];
+
+var numbers = [Number1.value,Number2.value, Number3.value,Number4.value,Number5.value,Number6.value, Number7.value,Number8.value];
+
+
+console.log(contacts) ;  
+console.log(numbers) ;
+
+});
+</script>
+</html>
