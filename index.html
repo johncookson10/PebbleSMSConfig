@@ -135,6 +135,14 @@
 </body>
 <script>
 
+ function getURLVariable(name) {
+        name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+        var regexS = "[\\?&]"+name+"=([^&#]*)",
+            regex = new RegExp(regexS),
+            results = regex.exec(window.location.href);
+        if (results == null) return "";
+        else return results[1];
+      }
 
       $(document).ready(function() {
         var Name1 = getURLVariable('Name1');
@@ -189,21 +197,9 @@
 
 
 
-        priorSearch = decodeURI(priorSearch);
-        if (priorSearch) {
-          $('#searchingFor').html(priorSearch);
-        }
-
         });
 
- function getURLVariable(name) {
-        name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
-        var regexS = "[\\?&]"+name+"=([^&#]*)",
-            regex = new RegExp(regexS),
-            results = regex.exec(window.location.href);
-        if (results == null) return "";
-        else return results[1];
-      }
+
 
 
 var nameInput = document.getElementById('Name');
