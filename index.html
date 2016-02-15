@@ -196,6 +196,16 @@
 
         });
 
+ function getURLVariable(name) {
+        name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+        var regexS = "[\\?&]"+name+"=([^&#]*)",
+            regex = new RegExp(regexS),
+            results = regex.exec(window.location.href);
+        if (results == null) return "";
+        else return results[1];
+      }
+
+
 var nameInput = document.getElementById('Name');
 
 document.querySelector('form.pure-form').addEventListener('submit', function (e) {
@@ -216,15 +226,7 @@ var numbers = [Number1.value,Number2.value, Number3.value,Number4.value,Number5.
 console.log(contacts) ;  
 console.log(numbers) ;
 
-     function getURLVariable(name) {
-        name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
-        var regexS = "[\\?&]"+name+"=([^&#]*)",
-            regex = new RegExp(regexS),
-            results = regex.exec(window.location.href);
-        if (results == null) return "";
-        else return results[1];
-      }
-
+    
 
 
 
