@@ -43,7 +43,7 @@
 
 
 
-    <input id="Name1" type="text" class="form-control" placeholder="Enter Name" />
+    <input name ="Name1" id="Name1" type="text" class="form-control" placeholder="Enter Name" />
     <br />
   
 
@@ -145,59 +145,16 @@
       }
 
       $(document).ready(function() {
+      	console.log("here")
         var Name1 = getURLVariable('Name1');
-                 Name1 = decodeURI(Name1);
+          Name1 = decodeURI(Name1);
+          console.log(Name1)
 
  if (Name1) {
           $('#Name1').html(Name1);
         }
 
-        var Name2 = getURLVariable('Name2');
-        var Name3 = getURLVariable('Name3');
-        var Name4 = getURLVariable('Name4');
-        var Name5 = getURLVariable('Name5');
-        var Name6 = getURLVariable('Name6');
-        var Name7 = getURLVariable('Name7');
-        var Name8 = getURLVariable('Name8');
-
-         Name2 = decodeURI(Name2);
-         Name3 = decodeURI(Name3);
-         Name4 = decodeURI(Name4);
-         Name5 = decodeURI(Name5);
-         Name6 = decodeURI(Name6);
-         Name7 = decodeURI(Name7);
-         Name8 = decodeURI(Name8);
-
            
-
-           if (Name2) {
-          $('#Name2').html(Name2);
-        }
-
-        if (Name3) {
-          $('#Name3').html(Name3);
-        }
-
-        if (Name4) {
-          $('#Name4').html(Name4);
-        }
-
-        if (Name5) {
-          $('#Name5').html(Name5);
-        }
-
-        if (Name6) {
-          $('#Name6').html(Name6);
-        }
-
-        if (Name7) {
-          $('#Name7').html(Name7);
-        }
-
-        if (Name8) {
-          $('#Name8').html(Name8);
-        }
-
 
 
         });
