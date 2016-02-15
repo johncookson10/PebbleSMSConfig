@@ -102,6 +102,16 @@
     <script>
       //Setup to allow easy adding more options later
       function saveOptions() {
+        var input1 = document.getElementById("InputName1");
+        var input2 = document.getElementById("InputName2");
+        var input3 = document.getElementById("InputName3");
+        var input4 = document.getElementById("InputName4");
+        var input5 = document.getElementById("InputName5");
+        var input6 = document.getElementById("InputName6");
+
+
+        var contacts = [input1,input2,input3,input4,input5,input6]
+        console.log(contacts)
         var invertSelect = document.getElementById("invert_select");
 
         var options = {
