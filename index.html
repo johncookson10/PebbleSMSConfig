@@ -139,6 +139,7 @@ document.querySelector('form.pure-form').addEventListener('submit', function (e)
     e.preventDefault();
 
 
+
 var contacts = [Name1.value,Name2.value, Name3.value,Name4.value,Name5.value,Name6.value, Name7.value,Name8.value];
 
 var numbers = [Number1.value,Number2.value, Number3.value,Number4.value,Number5.value,Number6.value, Number7.value,Number8.value];
@@ -146,6 +147,10 @@ var numbers = [Number1.value,Number2.value, Number3.value,Number4.value,Number5.
 
 console.log(contacts) ;  
 console.log(numbers) ;
+
+// Return data to watchapp
+  location.href = 'pebblejs://close#' + 
+    encodeURIComponent(JSON.stringify(contacts,numbers));
 
 });
 </script>
